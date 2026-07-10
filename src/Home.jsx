@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="home">
       <Navbar active={"home"}/>
-      <h1>Welcome to the Home Page <House/></h1>
+      <h1>Welcome to the Home Page <House size={"40px"}/></h1>
       <p>This is the main content of the home page.</p>
     </div>
   );
