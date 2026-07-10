@@ -1,21 +1,17 @@
 import { createRoot } from "react-dom/client";
-import About from "./About";
-import Contact from "./Contact";
-import Home from "./Home";
-import NotFound from "./NotFound";
-import { BrowserRouter } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Home from "./home";
+import About from "./about";
+import Contact from "./contact";
 
 const root = createRoot(document.getElementById("root"));
 
-const pathname = window.location.pathname;
-console.log("current pathname:", pathname);
-
-if (pathname === "/"){
-  root.render(<Home/>);
-}else if (pathname === "/about"){
-  root.render(<About/>);
-}else if (pathname === "/contact"){
-  root.render(<Contact/>);
-}else{
-  root.render(<NotFound/>);
-}
+root.render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} /> 
+      <Route path="/about" element={<About/>}/>
+      <Route path="/contact" element={<Contact/>}/> 
+    </Routes>
+  </BrowserRouter>,
+);
