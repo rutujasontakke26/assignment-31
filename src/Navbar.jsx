@@ -1,11 +1,12 @@
 import "./Navbar.css";
+import {Link} from "react-router";
 
 function Navbar({active}){
     return (
         <div className="navbar">
-        <a href="/" className="nav-menu" style={{ fontWeight: active === "home" ? "bold" : "normal"}}>Home</a>
-        <a href="/about" className="nav-menu" style={{ fontWeight: active === "about" ? "bold" : "normal"}}>About</a>
-        <a href="/contact" className="nav-menu" style={{ fontWeight: active === "contact" ? "bold" : "normal"}}>Contact</a>
+        <Link to="/" className="nav-menu" style={{ fontWeight: active === "home" ? "bold" : "normal"}}>Home</Link>{""}
+        <Link to="/about" className="nav-menu" style={{ fontWeight: active === "about" ? "bold" : "normal"}}>About</Link>{""}
+        <Link to="/contact" className="nav-menu" style={{ fontWeight: active === "contact" ? "bold" : "normal"}}>Contact</Link>{""}
         </div>
     );
 }
